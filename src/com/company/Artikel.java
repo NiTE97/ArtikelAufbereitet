@@ -18,10 +18,21 @@ public class Artikel {
         this.bezeichnung = bezeichnung;
     }
 
+    /**
+     * Methode zum Buchen von Zugang
+     * @param menge muss positiv sein
+     *              bestand darf nicht < 0 sein
+     */
     public void bucheZugang(int menge) {
+        bestand +=  menge;
     }
-
+    /**
+     * Methode zum Buchen von Abgang
+     * @param menge muss positiv sein
+     *              bestand darf nicht < 0 sein
+     */
     public void bucheAbgang(int menge) {
+        bestand -= menge;
     }
 
     @Override
@@ -35,10 +46,18 @@ public class Artikel {
         return sb.toString();
     }
 
+    public String getBeschreibung(){
+        return bezeichnung;
+    }
+
     public int getArtikelNr() {
         return artikelNr;
     }
 
+    /**
+     * Set-Methode fuer Artikelnr
+     * @param artikelNr muss 4-stellig sein
+     */
     public void setArtikelNr(int artikelNr) {
         this.artikelNr = artikelNr;
     }
@@ -47,6 +66,10 @@ public class Artikel {
         return bezeichnung;
     }
 
+    /**
+     * Set-Methode fuer Bezeichnung
+     * @param bezeichnung   darf nicht leer sein
+     */
     public void setBezeichnung(String bezeichnung) {
         this.bezeichnung = bezeichnung;
     }
@@ -55,6 +78,10 @@ public class Artikel {
         return bestand;
     }
 
+    /**
+     * Set-Methode fuer Bestand
+     * @param bestand   darf nicht < 0 sein
+     */
     public void setBestand(int bestand) {
         this.bestand = bestand;
     }
@@ -63,6 +90,10 @@ public class Artikel {
         return preis;
     }
 
+    /**
+     * Set-Methode fuer Preis
+     * @param preis     darf nicht <= 0 sein
+     */
     public void setPreis(double preis) {
         this.preis = preis;
     }
