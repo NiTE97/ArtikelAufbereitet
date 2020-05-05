@@ -1,5 +1,5 @@
 package com.company;
-
+//Testkommentar
 public class Artikel {
     private int artikelNr;
     private String bezeichnung;
